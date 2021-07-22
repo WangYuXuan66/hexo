@@ -40,9 +40,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  #medium: /images/bitbug_favicon.ico
-  medium: /images/favicon-32x32-next.png
+  small: /images/jianke16.ico
+  #small: /images/favicon-16x16-next.png
+  medium: /images/jianke32.ico
+  #medium: /images/favicon-32x32-next.png
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
@@ -278,13 +279,18 @@ tag_icon: false
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: false
-  animation: false
+  enable: true
+  animation: true
   #comment: Donate comment here.
+  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+  #wechatpay: /images/wechatpay.jpg
+  #alipay: /images/alipay.jpg
+  #paypal: /images/paypal.png
+  #bitcoin: /images/bitcoin.png
 
 reward:
-  enable: true
-  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+  #enable: true
+  #comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
   wechatpay: /images/wechatpay.png
   alipay: /images/alipay.png
   #paypal: /images/paypal.png
@@ -872,6 +878,17 @@ pace:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
   theme: minimal
+
+# Canvas-nest
+# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
+canvas_nest: # 网络背景
+  enable: true
+  onmobile: true # display on mobile or not
+  color: '0,0,0' # RGB values, use ',' to separate
+  opacity: 0.5 # the opacity of line: 0~1
+  zIndex: -1 # z-index property of the background
+  count: 150 # the number of lines
+
 
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three

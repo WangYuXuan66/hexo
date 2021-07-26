@@ -229,6 +229,11 @@
       {%- if theme.follow_me %}
         {{ partial('_partials/post/post-followme.swig', {}, {cache: theme.cache.enable}) }}
       {%- endif %}
+      <div>
+        {% if not is_index %}
+          {% include 'passage-end-tag.swig' %}
+        {% endif %}
+      </div>
 
       <footer class="post-footer">
         {%- if post.tags and post.tags.length %}
@@ -239,7 +244,7 @@
           {%- endif %}
           <div class="post-tags">
             {%- for tag in post.tags.toArray() %}
-              <a href="{{ url_for(tag.path) }}" rel="tag">{{ tag_indicate }} {{ tag.name }}</a>
+              <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i>{{ tag_indicate }} {{ tag.name }}</a>
             {%- endfor %}
           </div>
         {%- endif %}
